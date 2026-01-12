@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Кристины Карпицкой | Дизайнер</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Базовые стили и переменные */
+        :root {
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --beige: #f5f5f0;
+            --dark-beige: #e8e8e0;
+            --accent-beige: #d4c8b8;
+            --gray: #4a4a4a;
+            --light-gray: #f0f0f0;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background-color: var(--accent-beige);
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-beige);
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--black);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--black);
+        }
+        
+        .btn-beige {
+            background-color: var(--accent-beige);
+            color: var(--black);
+            border-color: var(--accent-beige);
+        }
+        
+        .btn-beige:hover {
+            background-color: transparent;
+        }
+        
+        /* Стили для header */
+        header {
+            background: linear-gradient(135deg, var(--beige) 0%, var(--dark-beige) 100%);
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4c8b8' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-subtitle {
+            font-size: 1.3rem;
+            margin: 20px 0 30px;
+            color: var(--gray);
+        }
+        
+        /* Стили для секции "О себе" */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            .about-content {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .about-text {
+                flex: 1;
+            }
+            
+            .about-visual {
+                flex: 1;
+            }
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        @media (min-width: 600px) {
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .process-step {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .process-step i {
+            font-size: 1.5rem;
+            color: var(--accent-beige);
+            margin-bottom: 10px;
+        }
+        
+        /* Стили для секции навыков */
+        .skills {
+            background-color: var(--beige);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .skill-item {
+            background-color: var(--white);
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-beige);
+        }
+        
+        /* Стили для секции опыта */
+        .experience {
+            background-color: var(--white);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            background-color: var(--dark-beige);
+            transform: scale(1.05);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-beige);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .project-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+        
+        .project-type {
+            background-color: var(--beige);
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+        
+        /* Стили для подвала */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gray);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent-beige);
+            color: var(--black);
+            transform: translateY(-5px);
+        }
+        
+        .footer-info {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--dark-beige);
+            border-top: 1px solid var(--gray);
+            padding-top: 20px;
+        }
+        
+        /* Анимации */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Кнопка "Наверх" */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--black);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            background-color: var(--accent-beige);
+            color: var(--black);
+        }
+        
+        /* Навигация */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-beige);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--black);
+        }
+        
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                gap: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Анимация загрузки */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-load {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Кристина Карпицкая</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#skills" class="nav-link">Навыки</a>
+                <a href="#experience" class="nav-link">Опыт</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Первый блок - заголовок портфолио -->
+    <header>
+        <div class="container header-content">
+            <h1 class="animate-on-load">Портфолио Карпицкой Кристины</h1>
+            <p class="header-subtitle animate-on-load delay-1">Дизайнер с 2021 года. Создаю функциональные и эстетичные веб-решения</p>
+            <a href="#about" class="btn btn-beige animate-on-load delay-2">Узнать больше</a>
+        </div>
+    </header>
+    
+    <!-- Второй блок - о себе -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="fade-in">О себе</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>Я практикующий дизайнер с 2021 года, получаю высшее образование по своей специализации. Работаю с любой сложностью сайтов от лендингов до интернет-магазинов со сложной анимацией и кодом.</p>
+                    <p>В процессе работы делаю функциональный анализ, конкурентный анализ, анализ персон, структуру сайта, прототипирование, JTD, User flow, CJM. Помогу с разработкой дизайн-системы, применяю компоненты, варианты и auto layout в своих работах.</p>
+                </div>
+                <div class="about-visual fade-in">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <i class="fas fa-search"></i>
+                            <h3>Анализ</h3>
+                            <p>Функциональный, конкурентный анализ и анализ персон</p>
+                        </div>
+                        <div class="process-step">
+                            <i class="fas fa-sitemap"></i>
+                            <h3>Структура</h3>
+                            <p>Прототипирование, JTD, User flow, CJM</p>
+                        </div>
+                        <div class="process-step">
+                            <i class="fas fa-palette"></i>
+                            <h3>Дизайн</h3>
+                            <p>Создание дизайн-систем с компонентами и auto layout</p>
+                        </div>
+                        <div class="process-step">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Реализация</h3>
+                            <p>Воплощение проектов любой сложности</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Третий блок - навыки -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="fade-in">Навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-item fade-in">
+                    <i class="fab fa-adobe skill-icon"></i>
+                    <h3>Adobe</h3>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fab fa-figma skill-icon"></i>
+                    <h3>Figma</h3>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h3>HTML/CSS</h3>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fas fa-paint-brush skill-icon"></i>
+                    <h3>Affinity</h3>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fas fa-cube skill-icon"></i>
+                    <h3>Blender</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Четвертый блок - опыт -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="fade-in">Опыт</h2>
+            <div class="stats">
+                <div class="stat-item fade-in">
+                    <span class="stat-number">10</span>
+                    <h3>Успешных проектов</h3>
+                    <p>2 интернет-магазина, 2 многостраничника и 6 лендингов</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <span class="stat-number">4</span>
+                    <h3>Года опыта</h3>
+                    <p>Создаю сайты, которые закрывают потребности пользователей</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <span class="stat-number">2</span>
+                    <h3>Недели - средний срок</h3>
+                    <p>Выполнения проекта от концепции до реализации</p>
+                </div>
+            </div>
+            <div class="project-types fade-in">
+                <div class="project-type">Лендинги</div>
+                <div class="project-type">Интернет-магазины</div>
+                <div class="project-type">Многостраничные сайты</div>
+                <div class="project-type">Дизайн-системы</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Подвал -->
+    <footer id="contact">
+        <div class="container">
+            <h2 class="fade-in">Свяжитесь со мной</h2>
+            <p class="fade-in">@kristinakarpitskaya</p>
+            <div class="social-links">
+                <a href="#" class="social-link fade-in"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link fade-in"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link fade-in"><i class="fab fa-behance"></i></a>
+                <a href="#" class="social-link fade-in"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <div class="footer-info">
+                <p>deepseek - 45 минут</p>
+                <p>Реализованный функционал на JavaScript: плавная прокрутка, анимация появления элементов при скролле, кнопка "Наверх", мобильное меню, подсветка активного раздела в навигации</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Кнопка "Наверх" -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+    <script>
+        // Функционал на JavaScript
+        
+        // 1. Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // 2. Плавная прокрутка к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 3. Анимация появления элементов при скролле
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // 4. Кнопка "Наверх"
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        const toggleScrollToTopBtn = () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        };
+        
+        // 5. Подсветка активного раздела в навигации
+        const sections = document.querySelectorAll('section');
+        const navLinksArray = document.querySelectorAll('.nav-link');
+        
+        const highlightNavLink = () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinksArray.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        };
+        
+        // 6. Прозрачность навигации при скролле
+        const navbar = document.getElementById('navbar');
+        
+        const toggleNavbarTransparency = () => {
+            if (window.pageYOffset > 100) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        };
+        
+        // Обработчики событий
+        window.addEventListener('load', () => {
+            fadeInOnScroll();
+            toggleScrollToTopBtn();
+            highlightNavLink();
+            toggleNavbarTransparency();
+        });
+        
+        window.addEventListener('scroll', () => {
+            fadeInOnScroll();
+            toggleScrollToTopBtn();
+            highlightNavLink();
+            toggleNavbarTransparency();
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Анимация цифр в статистике
+        const animateNumbers = () => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const duration = 2000; // 2 seconds
+            const frameRate = 1000 / 60; // 60 fps
+            const totalFrames = Math.round(duration / frameRate);
+            
+            statNumbers.forEach(statNumber => {
+                const targetNumber = parseInt(statNumber.textContent);
+                let currentFrame = 0;
+                
+                const counter = setInterval(() => {
+                    currentFrame++;
+                    const progress = currentFrame / totalFrames;
+                    const currentNumber = Math.round(targetNumber * progress);
+                    
+                    statNumber.textContent = currentNumber;
+                    
+                    if (currentFrame === totalFrames) {
+                        clearInterval(counter);
+                        statNumber.textContent = targetNumber;
+                    }
+                }, frameRate);
+            });
+        };
+        
+        // Запуск анимации чисел при появлении секции
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.getElementById('experience'));
+    </script>
+</body>
+</html>
